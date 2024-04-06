@@ -21,4 +21,6 @@ This project's investigation into the application of machine learning and deep l
 ## Future Work
 This project opens several avenues for further exploration, including integrating real-time weather data, considering airport congestion levels, and deploying models as a service for real-time predictions. I will also work on a locally ran deployment of the models using Avinor data to give a real-time departure time prediction.
 
+## Links
 Kaggle notebook link: https://www.kaggle.com/chondeagle/flightestimations
+Avinor flight data: https://avinor.no/en/corporate/services/flydata/flight-data
