@@ -23,12 +23,11 @@ venv\Scripts\activate.bat
 ### Install Flask
 Install dependencies
 ```git
-pip install flask
-pip install jupyterlab
+pip install -r requirements.txt
 ```
 
 ### Run the models Notebook
-Before starting the Flask application, run the notebook that saves the model. Ensure that you are in the flask applications folder /flaskr
+Before starting the Flask application, run the notebook that saves the model, this is because the model size is too large for github. Ensure that you are in the flask applications folder /flaskr
 ```git
 jupyter notebook model.ipynb
 ```
@@ -42,5 +41,5 @@ flask run
 ### Accessing the application
 Once the Flask server is running, you can access the application by navigating to the following URL in your browser
 ```git
-http://127.0.0.1:5000/flights/BGO/D
+http://127.0.0.1:5000/
 ```
