@@ -33,7 +33,7 @@ Before starting the Flask application, run the notebook that saves the model. En
 jupyter notebook model.ipynb
 ```
 
-### Starting the Flask application
+## Starting the Flask application
 Navigate to the `/flaskr`directory. then start the Flask application by running:
 ```git
 flask run
