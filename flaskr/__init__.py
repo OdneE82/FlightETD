@@ -1,7 +1,7 @@
 import os
-from flask import Flask, jsonify, request
-import numpy as np
+from flask import Flask, jsonify, redirect
 import requests
+import numpy as np
 import xml.etree.ElementTree as ET
 import pytz
 from datetime import datetime, timedelta
@@ -10,10 +10,14 @@ import joblib
 
 app = Flask(__name__)
 
-with open('flaskr/model.pkl', "rb") as model_file:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, 'model.pkl')
+ENCODER_PATH = os.path.join(BASE_DIR, 'airport_encoder.joblib')
+
+with open(MODEL_PATH, 'rb') as model_file:
     model = pickle.load(model_file)
 
-encoder = joblib.load('flaskr/airport_encoder.joblib')
+encoder = joblib.load(ENCODER_PATH)
 
 def make_prediction(features):
     return model.predict([features])[0]
@@ -85,6 +89,10 @@ def fetch_and_parse_xml(airport_code='BGO', direction='D'):
     else:
         return []
     
+@app.route('/')
+def index():
+    # Redirect to the desired default route
+    return redirect('/flights/BGO/D')
 
 @app.route('/flights/<airport_code>/<direction>')
 def flights(airport_code, direction):
@@ -92,4 +100,4 @@ def flights(airport_code, direction):
     return jsonify(flights)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=4000)
+    app.run(debug=True,)
