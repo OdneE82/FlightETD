@@ -8,7 +8,7 @@ Flight departure time preidction is a complex problem that involves numerious va
 As someone fascinated by the interplay between technology and aviation, I was motivated to uncover the methodologies behind these predictions. This project serves as an exploratory journey into the capabilites of machine learning and deep learning, aiming to understand their application in a domain rich with real-time data and requiring high accuracy.
 
 ## Dataset
-The dataset includes all recorded flights by Widerøe from Bergen Flesland Airport (BGO) from January 1st, 2024, to 2024. It encompasses various features, such as flight numbers, scheduled and actual departure times, destiantions, aircraft types, and delay codes. This dataset provides a comprehensive foundation for modeling and predictions.
+The dataset includes all recorded flights by Widerøe from Bergen Flesland Airport (BGO) from January 1st, 2021, to 2024. It encompasses various features, such as flight numbers, scheduled and actual departure times, destiantions, aircraft types, and delay codes. This dataset provides a comprehensive foundation for modeling and predictions.
 
 ## Methodology
 The project employs a two-phase approach:
